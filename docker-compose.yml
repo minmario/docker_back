@@ -23,8 +23,12 @@ services:
       - sist_net
     ports:
       - "8080:8080"
+    #environment:
+    #- SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL8Dialect
+    #- SPRING_JPA_HIBERNATE_DDL_AUTO=update
     depends_on:
       - mysql8
+    restart: always
 networks:
   sist_net:
     driver: bridge

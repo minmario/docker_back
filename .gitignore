@@ -35,4 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
-/db/data
+
+### DB Repository ###
+db/
