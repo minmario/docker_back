@@ -61,7 +61,7 @@ jobs:
         
     - name: 셀상의 EC2 접근과 도커 compose실행
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.HOST }} << 'EOF'
+        ssh -o StrictHostKeyChecking=no root@${{ secrets.HOST }} << 'EOF'
           cd /home/ubuntu/backend/docker_back
           docker-compose down
           docker-compose up -d --build
